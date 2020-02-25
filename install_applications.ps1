@@ -3,24 +3,16 @@ $apps = @(
     "ditto"
     "filezilla"
     "firefox"
-    "git.install"
+    "git.install `"/VERYSILENT /NORESTART /NOCANCEL /SP- /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS /COMPONENTS=icons`""
     "googlechrome"
     "greenshot"
     "imgburn"
     "keepass.install"
-    "microsoft-teams"
     "notepadplusplus.install"
-    #"office365proplus"
-    "openssh"
-    "packer"
-    "python"
-    "sysinternals"
+    "openssh -params `"/SSHAgentFeature`""
     "teracopy"
     "vscode"
     "vnc-viewer"
-    #"wsl"
-    "zoom"
-    
 )
 
 foreach ($app in $apps) { choco.exe install -y $app }
