@@ -1,18 +1,14 @@
 $apps = @(
     "7zip.install"
-    "ditto"
+    "amazon-workspaces"
     "filezilla"
-    "firefox"
     "git.install `"/VERYSILENT /NORESTART /NOCANCEL /SP- /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS /COMPONENTS=icons`""
-    "googlechrome"
-    "greenshot"
-    "imgburn"
     "keepass.install"
     "notepadplusplus.install"
-    "openssh -params `"/SSHAgentFeature`""
-    "teracopy"
-    "vscode"
-    "vnc-viewer"
+    "rvtools"
+    "sumatrapdf.install"
+    "vmware-horizon-client"
+    "vscode"    
 )
 
 foreach ($app in $apps) { choco.exe install -y $app }
